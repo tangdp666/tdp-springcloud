@@ -1,0 +1,5 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.ccread.common.web.config.FeignConfig,\
+  com.ccread.common.web.exception.GlobalExceptionHandler,\
+  com.ccread.common.web.sentinel.DefaultBlockExceptionHandler,\
+  com.ccread.common.web.sentinel.RequestOriginParserDefinition

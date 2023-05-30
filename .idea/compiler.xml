@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="common-mybatis-plus" />
+        <module name="tdp-ccread-gateway" />
+        <module name="admin-api" />
+        <module name="common-web" />
+        <module name="admin-boot" />
+        <module name="common-redis" />
+        <module name="common-base" />
+        <module name="tdp-ccread-auth" />
+        <module name="tdp-ccread-book" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="admin-api" options="-parameters" />
+      <module name="admin-boot" options="-parameters" />
+      <module name="common-base" options="-parameters" />
+      <module name="common-mybatis-plus" options="-parameters" />
+      <module name="common-redis" options="-parameters" />
+      <module name="common-web" options="-parameters" />
+      <module name="tdp-ccread-admin" options="" />
+      <module name="tdp-ccread-auth" options="-parameters" />
+      <module name="tdp-ccread-book" options="-parameters" />
+      <module name="tdp-ccread-common" options="" />
+      <module name="tdp-ccread-gateway" options="-parameters" />
+    </option>
+  </component>
+</project>
