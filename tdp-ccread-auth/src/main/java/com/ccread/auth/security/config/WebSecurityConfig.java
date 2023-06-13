@@ -82,18 +82,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         return provider;
     }
 
-//    @Bean
-//    public DaoAuthenticationProvider daoAuthenticationProvider() {
-//        DaoAuthenticationProvider provider = new DaoAuthenticationProvider();
-//        Map<String,UserDetailsService> userDetailsServiceMap = new HashMap<>();
-//        userDetailsServiceMap.put(ClientEnums.ADMIN_CLIENT.getName(),sysUserDetailsService);
-//        userDetailsServiceMap.put(ClientEnums.MEMBER_CLIENT.getName(),memberUserDetailsService);
-//        provider.setUserDetailsService(new MoreAuthenticatedUserDetailsService(userDetailsServiceMap));
-//        provider.setPasswordEncoder(passwordEncoder());
-//        provider.setHideUserNotFoundExceptions(false); // 是否隐藏用户不存在异常，默认:true-隐藏；false-抛出异常；
-//        return provider;
-//    }
-
     @Bean
     public PasswordEncoder passwordEncoder() {
         return PasswordEncoderFactories.createDelegatingPasswordEncoder();

@@ -8,14 +8,21 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="common-mybatis-plus" />
+        <module name="comment-api" />
+        <module name="comment-boot" />
+        <module name="bookeack-api" />
         <module name="tdp-ccread-gateway" />
         <module name="admin-api" />
-        <module name="common-web" />
         <module name="admin-boot" />
+        <module name="order-api" />
         <module name="common-redis" />
         <module name="common-base" />
+        <module name="book-boot" />
+        <module name="bookeack-boot" />
+        <module name="common-web" />
+        <module name="book-api" />
+        <module name="order-boot" />
         <module name="tdp-ccread-auth" />
-        <module name="tdp-ccread-book" />
       </profile>
     </annotationProcessing>
   </component>
@@ -23,15 +30,26 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="admin-api" options="-parameters" />
       <module name="admin-boot" options="-parameters" />
+      <module name="book-api" options="-parameters" />
+      <module name="book-boot" options="-parameters" />
+      <module name="bookeack-api" options="-parameters" />
+      <module name="bookeack-boot" options="-parameters" />
+      <module name="comment-api" options="-parameters" />
+      <module name="comment-boot" options="-parameters" />
       <module name="common-base" options="-parameters" />
       <module name="common-mybatis-plus" options="-parameters" />
       <module name="common-redis" options="-parameters" />
       <module name="common-web" options="-parameters" />
+      <module name="order-api" options="-parameters" />
+      <module name="order-boot" options="-parameters" />
       <module name="tdp-ccread-admin" options="" />
       <module name="tdp-ccread-auth" options="-parameters" />
-      <module name="tdp-ccread-book" options="-parameters" />
+      <module name="tdp-ccread-book" options="" />
+      <module name="tdp-ccread-bookeack" options="" />
+      <module name="tdp-ccread-comment" options="" />
       <module name="tdp-ccread-common" options="" />
       <module name="tdp-ccread-gateway" options="-parameters" />
+      <module name="tdp-ccread-order" options="" />
     </option>
   </component>
 </project>

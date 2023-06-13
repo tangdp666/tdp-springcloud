@@ -14,6 +14,10 @@
         <module>tdp-ccread-admin/admin-api</module>
         <module>tdp-ccread-gateway</module>
         <module>tdp-ccread-book</module>
+        <module>tdp-ccread-comment</module>
+        <module>tdp-ccread-bookeack</module>
+        <module>tdp-ccread-order</module>
+
 
 
     </modules>

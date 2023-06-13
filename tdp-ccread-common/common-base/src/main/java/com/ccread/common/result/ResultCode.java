@@ -20,6 +20,8 @@ public enum ResultCode implements IResultCode, Serializable {
     FLOW_LIMITING("B0210", "系统限流"),
     DEGRADATION("B0220", "系统功能降级"),
     SERVICE_NO_AUTHORITY("B0221", "服务未授权"),
+    USERNAME_ISEXIST("B0222", "用户名已经存在"),
+    IS_ERROR("66666","出错辣"),
     ;
 
     @Override

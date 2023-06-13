@@ -33,6 +33,7 @@ public class SysUserDetails implements UserDetails {
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return this.authorities;
+//        return null;
     }
 
     @Override
@@ -63,5 +64,6 @@ public class SysUserDetails implements UserDetails {
     @Override
     public boolean isEnabled() {
         return this.enabled;
+//        return true;
     }
 }

@@ -25,7 +25,7 @@ public class AuthController {
     private KeyPair keyPair;
     private final TokenEndpoint tokenEndpoint;
 
-//    @CrossOrigin(origins = "http://localhost:5173")
+
     @PostMapping("/token")
     public Object postAccessToken(
             Principal principal,

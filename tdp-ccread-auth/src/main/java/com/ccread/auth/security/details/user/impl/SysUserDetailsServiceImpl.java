@@ -1,8 +1,10 @@
-package com.ccread.auth.security.details.user;
+package com.ccread.auth.security.details.user.impl;
 
 import com.ccread.admin.api.UserFeignClient;
 import com.ccread.admin.dto.UserAuthDTO;
 import com.ccread.auth.comm.enums.PasswordEncoderTypeEnum;
+import com.ccread.auth.security.details.user.SysUserDetails;
+import com.ccread.common.redis.utils.RedisUtils;
 import com.ccread.common.result.R;
 import com.ccread.common.result.ResultCode;
 import lombok.RequiredArgsConstructor;
@@ -25,7 +27,12 @@ import java.util.Objects;
 @Slf4j
 @RequiredArgsConstructor
 public class SysUserDetailsServiceImpl implements UserDetailsService {
+
     private final UserFeignClient userFeignClient;
+
+    private final RedisUtils redisUtils;
+
+
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
@@ -53,6 +60,10 @@ public class SysUserDetailsServiceImpl implements UserDetailsService {
         } else if (!userDetails.isAccountNonExpired()) {
             throw new AccountExpiredException("该账号已过期!");
         }
+        System.out.println(userDetails.getUserId());
+        redisUtils.set("userid",userDetails.getUserId());
+
+        System.out.println("++++++++"+redisUtils.get("userid"));
         return userDetails;
     }
 
@@ -64,16 +75,5 @@ public class SysUserDetailsServiceImpl implements UserDetailsService {
         return authorities;
     }
 
-//    private SysUserDetails loadUser(String username) {
-//        Collection<SimpleGrantedAuthority> authorities = new ArrayList<>();
-//        authorities.add(new SimpleGrantedAuthority("admin"));
-//        authorities.add(new SimpleGrantedAuthority("root"));
-//        return SysUserDetails.builder()
-//                .userId(1L)
-//                .username(username)
-//                .enabled(true)
-//                .authorities(authorities)
-//                .password(PasswordEncoderTypeEnum.BCRYPT.getPrefix() + new BCryptPasswordEncoder().encode("123456789")).build();
-//    }
 
 }
