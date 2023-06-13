@@ -1,0 +1,38 @@
+server:
+  port: 8006
+spring:
+  application:
+    name: ccread-bookeack
+  cloud:
+    nacos:
+      # 注册中心
+      discovery:
+        server-addr: http://127.0.0.1:8848
+      # 配置中心
+      config:
+        server-addr: ${spring.cloud.nacos.discovery.server-addr}
+        file-extension: yaml
+        shared-configs[0]:
+          data-id: ccread-common.yaml
+          refresh: true
+logging:
+  level:
+    spring.: DEBUG
+
+#seata:
+#  # 注册
+#  registry:
+#    # 使用Nacos
+#    type: nacos
+#    nacos:
+#      # 使用Seata的命名空间，这样才能正确找到Seata服务，由于组使用的是SEATA_GROUP，配置默认值就是，就不用配了
+#      namespace: 328563f2-3c7e-4f06-be2d-43e17550da2c
+#      username: nacos
+#      password: nacos
+#  # 配置
+#  config:
+#    type: nacos
+#    nacos:
+#      namespace: 328563f2-3c7e-4f06-be2d-43e17550da2c
+#      username: nacos
+#      password: nacos
